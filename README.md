@@ -1,6 +1,8 @@
 # Python Piano
 
-Simple
+Simple piano with some songs and free playing mode.
+
+**ESCAPE** to exit, **BACKSPACE** to skip a song, **SPACE** to listen.
 
 ### Requirements:
 
