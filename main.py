@@ -6,7 +6,7 @@ from songs import smoke, lambada, army, popcorn, yesterday, bells, tatu, march
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--scale', default=1.5, type=int)
+    parser.add_argument('--scale', default=1.5, type=float)
     scale = parser.parse_args().scale
     songs = [smoke, lambada, army, popcorn, yesterday, bells, tatu, march]
     while True:
