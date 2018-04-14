@@ -45,10 +45,11 @@ class GUI:
         pygame.display.update()
         if self._showing_message:
             self._showing_message = False
-            sleep(3)
+            sleep(1.5)
         self._screen.fill((0, 0, 0))
 
     def _show_demo(self):
+        showing = True
         for key, wait in self._game.song.keys:
             if wait == 0:
                 wait = 1
@@ -58,8 +59,14 @@ class GUI:
             start = time()
             while time() - start < wait * self._game.song.tempo / 1000:
                 self.draw()
+                event = pygame.event.poll()
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    showing = False
+                    break
             self._piano.release_key(button)
             self._sound.stop(key)
+            if not showing:
+                break
 
     def _draw_piano(self):
         for key, button in self._piano.buttons.items():
@@ -86,7 +93,7 @@ class GUI:
 
     def _get_beat_state(self):
         value = self._game.song.tempo
-        return (time() * 1000) % (4 * value) > 2 * value
+        return (time() * 1000) % (8 * value) > 4 * value
 
     def _draw_song_name(self):
         piano_x, piano_y = self._piano.get_size()

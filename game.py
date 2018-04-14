@@ -28,10 +28,10 @@ class Game:
 
     def __init__(self, song, difficulty):
         self.state = GameState.NONE
-        self._previous_time = None
-        self._next_key_index = 0
         self.song = song
         self.difficulty = difficulty
+        self._previous_time = None
+        self._next_key_index = 0
         self._misses = 0
 
     def press_key(self, number):

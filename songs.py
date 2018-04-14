@@ -1,4 +1,5 @@
 class Song:
+
     def __init__(self, name, keys_info, tempo):
         self.name = name
         self.keys = keys_info
@@ -20,7 +21,7 @@ lambada = Song('Lambada', [
     (4, 2),
     (2, 2),
     (4, 0)
-], 150)
+], 120)
 
 army = Song('Seven Nation Army', [
     (7, 7),
@@ -39,7 +40,7 @@ army = Song('Seven Nation Army', [
     (5, 3),
     (3, 2),
     (2, 0)
-], 150)
+], 120)
 
 popcorn = Song('Popcorn', [
     (16, 3),
@@ -71,7 +72,7 @@ popcorn = Song('Popcorn', [
     (11, 3),
     (14, 3),
     (16, 0)
-], 150)
+], 100)
 
 smoke = Song('Smoke On The Water', [
     (5, 4),
@@ -86,7 +87,7 @@ smoke = Song('Smoke On The Water', [
     (10, 6),
     (8, 4),
     (5, 0)
-], 150)
+], 100)
 
 tatu = Song('Not Gonna Get Us', [
     (11, 4),
@@ -129,7 +130,7 @@ tatu = Song('Not Gonna Get Us', [
     (17, 2),
     (18, 2),
     (15, 0)
-], 200)
+], 150)
 
 yesterday = Song('Yesterday', [
     (5, 2),
@@ -163,7 +164,7 @@ yesterday = Song('Yesterday', [
     (3, 4),
     (7, 2),
     (7, 0)
-], 200)
+], 150)
 
 bells = Song('Jingle Bells', [
     (2, 3),
@@ -206,7 +207,7 @@ bells = Song('Jingle Bells', [
     (14, 3),
     (9, 3),
     (7, 0)
-], 200)
+], 150)
 
 march = Song('Imperial March', [
     (7, 6),
@@ -251,7 +252,7 @@ march = Song('Imperial March', [
     (3, 4),
     (10, 2),
     (7, 0)
-], 200)
+], 150)
 
 europe = Song('The Final Countdown', [
     (13, 1),
@@ -291,4 +292,4 @@ europe = Song('The Final Countdown', [
     (13, 1),
     (11, 1),
     (13, 0)
-], 200)
+], 150)
